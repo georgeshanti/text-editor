@@ -1,6 +1,9 @@
 import { TextDocument } from './document';
+import { Editor } from './editor';
 import { Style } from './style';
 
-var style = new Style();
-style.style = {"text":"toomuch"};
-console.log(style);
+window.onload=()=>{
+    var doc:TextDocument = new TextDocument();
+    var editorDiv = document.getElementById("editor");
+    var editor:Editor = new Editor(doc, editorDiv);
+}
