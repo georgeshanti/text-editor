@@ -8,27 +8,17 @@ class Editor{
     container:Element;
     cursorStyle:Style;
 
-    constructor(doc:TextDocument, con:Element){
-        this.document = doc;
+    constructor(con:Element){
+        this.document = new TextDocument(this);
         this.container = con;
-
-        this.type = this.type.bind(this);
-
-        $(this.container).keypress(this.type);
 
         this.paint();
     }
 
     paint(){
-        var html = this.document.render();
-        $(this.container).html(html);
-        console.log("Render:", html);
-    }
-
-    type(e){
-        var ele=e.target;
-        console.log(ele);
-        // if(this.cursorStyle==ele.style)
+        $(this.container).html('');
+        $(this.container).append(this.document.render());
+        console.log("Rendered!");
     }
 }
 

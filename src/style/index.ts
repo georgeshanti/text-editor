@@ -1,6 +1,7 @@
 class Style{
     style:{[name:string]:string};
-    constructor(){
+    constructor(styling:{[name:string]:string;}){ 
+        this.style = styling;
     }
 }
 
