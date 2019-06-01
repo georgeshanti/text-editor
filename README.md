@@ -8,7 +8,6 @@ A simple html editor for writing emails, blog posts, etc. for those of you who m
 4. Links
 
 ## Development
-<hr>
 The code is written in TypeScript, although there is a lot of code that I ended up not writing types for but not to worry. That will be fixed soon.
 
 There are 2 main components:
